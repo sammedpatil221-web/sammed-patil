@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+<style>
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Header / Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+header h1 {
+  font-size: 1.8em;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+.hero h2 {
+  font-size: 3em;
+  color: #f8fafc;
+  animation: fadeDown 1.5s ease;
+}
+.hero h2 span {
+  color: #38bdf8;
+}
+.hero p {
+  margin-top: 15px;
+  color: #94a3b8;
+  max-width: 600px;
+  animation: fadeUp 1.5s ease;
+}
+.hero a {
+  margin-top: 25px;
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: fadeUp 2s ease;
+}
+.hero a:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* About Section */
+section {
+  padding: 100px 80px;
+}
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.about img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+.about-text {
+  max-width: 600px;
+}
+.about-text h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+.about-text p {
+  color: #cbd5e1;
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+}
+.projects h3 {
+  color: #38bdf8;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.project {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+.project h4 {
+  color: #f8fafc;
+  margin-bottom: 10px;
+}
+.project p {
+  color: #94a3b8;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+.contact h3 {
+  color: #38bdf8;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.contact a {
+  display: inline-block;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.contact a:hover {
+  background-color: #0ea5e9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #0f172a;
+  color: #64748b;
+  font-size: 0.9em;
+  border-top: 1px solid #1e293b;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px;
+  }
+  section {
+    padding: 80px 30px;
+  }
+  .hero h2 {
+    font-size: 2.2em;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MyPortfolio</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Hello, I'm <span>Your Name</span></h2>
+  <p>A passionate Web Developer crafting elegant, modern, and responsive user interfaces with a focus on interactivity and performance.</p>
+  <a href="#projects">View My Work</a>
+</section>
+
+<section class="about" id="about">
+  <img src="https://via.placeholder.com/280" alt="Profile Photo">
+  <div class="about-text">
+    <h3>About Me</h3>
+    <p>I’m a creative front-end developer who enjoys turning complex problems into simple, beautiful, and intuitive designs. My goal is to build experiences that make people’s lives easier and more enjoyable.</p>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    <div class="project">
+      <h4>Portfolio Website</h4>
+      <p>A personal website to showcase projects, skills, and achievements with modern animations.</p>
+    </div>
+    <div class="project">
+      <h4>Dashboard UI</h4>
+      <p>An interactive admin dashboard with charts, dark mode, and smooth transitions.</p>
+    </div>
+    <div class="project">
+      <h4>Landing Page</h4>
+      <p>Marketing-focused landing page optimized for conversions and fast load times.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h3>Let’s Connect</h3>
+  <a href="mailto:youremail@example.com">Contact Me</a>
+</section>
+
+<footer>
+  <p>© 2025 Your Name. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
